@@ -1,0 +1,35 @@
+{% load cities_tags %}
+
+
+<div class="container py-3">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-md-8 col-lg-6 col-xl-4">
+
+      <div class="card" style="color: #4B515D; border-radius: 35px;">
+        <div class="card-body p-4">
+
+          <div class="d-flex">
+            <h5 class="flex-grow-1">{{ time }}</h5>
+          </div>
+
+          <div class="d-flex flex-column text-center mt-5 mb-4">
+            <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> {{ temperature }}°C </h6>
+            <span class="small" style="color: #868B94">{{ description }}</span>
+          </div>
+
+          <div class="d-flex align-items-center">
+            <div class="flex-grow-1" style="font-size: 1rem;">
+              <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1"> {{ wind_speed }} km/h </span></div>
+              <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span class="ms-1"> {{ humidity }}% </span></div>
+            </div>
+            <div>
+              <img src="https://openweathermap.org/img/w/{{ icon }}.png" width="100px">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

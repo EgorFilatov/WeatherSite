@@ -1,0 +1,12 @@
+{% extends 'weather/base.html' %}
+{% load static %}
+
+{% block header %}
+<div class="p-5 text-center bg-light">
+  <h1 class="mb-3">Weather in {{ city }} now</h1>
+</div>
+{% endblock %}
+
+{% block page_content %}
+    {% include 'weather/inc/_weather_widget.html' %}
+{% endblock %}

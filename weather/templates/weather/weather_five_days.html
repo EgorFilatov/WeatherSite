@@ -1,0 +1,147 @@
+{% extends 'weather/base.html' %}
+{% load static %}
+
+{% block header %}
+<div class="p-5 text-center bg-light">
+  <h1 class="mb-3">Weather forecast in {{ city }} for five days</h1>
+</div>
+{% endblock %}
+
+{% block page_content %}
+<div class="container py-3">
+  <div class="row d-flex justify-content-center align-items-center">
+
+        <div class="card" style="color: #4B515D; border-radius: 35px;">
+          <div class="card-body p-4">
+
+            <div class="d-flex">
+              <h5 class="flex-grow-1">{{ weather_data_day_1.0.date }}</h5>
+            </div>
+
+            <hr>
+
+            <div class="row">
+              {% for el in weather_data_day_1 %}
+                {% include 'weather/inc/_weather_widget_five_days.html' %}
+              {% endfor %}
+            </div>
+
+          </div>
+        </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="container py-3">
+  <div class="row d-flex justify-content-center align-items-center">
+
+        <div class="card" style="color: #4B515D; border-radius: 35px;">
+          <div class="card-body p-4">
+
+            <div class="d-flex">
+              <h5 class="flex-grow-1">{{ weather_data_day_2.0.date }}</h5>
+            </div>
+
+            <hr>
+
+
+            <div class="row">
+              {% for el in weather_data_day_2 %}
+                {% include 'weather/inc/_weather_widget_five_days.html' %}
+              {% endfor %}
+            </div>
+
+          </div>
+        </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="container py-3">
+  <div class="row d-flex justify-content-center align-items-center">
+
+        <div class="card" style="color: #4B515D; border-radius: 35px;">
+          <div class="card-body p-4">
+
+            <div class="d-flex">
+              <h5 class="flex-grow-1">{{ weather_data_day_3.0.date }}</h5>
+            </div>
+
+            <hr>
+
+
+            <div class="row">
+              {% for el in weather_data_day_3 %}
+                {% include 'weather/inc/_weather_widget_five_days.html' %}
+              {% endfor %}
+            </div>
+
+          </div>
+        </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="container py-3">
+  <div class="row d-flex justify-content-center align-items-center">
+
+        <div class="card" style="color: #4B515D; border-radius: 35px;">
+          <div class="card-body p-4">
+
+            <div class="d-flex">
+              <h5 class="flex-grow-1">{{ weather_data_day_4.0.date }}</h5>
+            </div>
+
+            <hr>
+
+
+            <div class="row">
+              {% for el in weather_data_day_4 %}
+                {% include 'weather/inc/_weather_widget_five_days.html' %}
+              {% endfor %}
+            </div>
+
+          </div>
+        </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="container py-3">
+  <div class="row d-flex justify-content-center align-items-center">
+
+        <div class="card" style="color: #4B515D; border-radius: 35px;">
+          <div class="card-body p-4">
+
+            <div class="d-flex">
+              <h5 class="flex-grow-1">{{ weather_data_day_5.0.date }}</h5>
+            </div>
+
+            <hr>
+
+
+            <div class="row">
+              {% for el in weather_data_day_5 %}
+                {% include 'weather/inc/_weather_widget_five_days.html' %}
+              {% endfor %}
+            </div>
+
+          </div>
+        </div>
+  </div>
+</div>
+
+
+{% endblock %}
